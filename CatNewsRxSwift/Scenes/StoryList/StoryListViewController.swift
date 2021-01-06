@@ -5,7 +5,6 @@
 //  Created by Adam Young on 06/01/2021.
 //
 
-import CatNewsCore
 import Differentiator
 import RxCocoa
 import RxDataSources
@@ -42,12 +41,13 @@ final class StoryListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.refreshControl = UIRefreshControl()
+        tableView.accessibilityLabel = NSLocalizedString("Stories", comment: "Stories")
         tableView.register(MainStoryTableViewCell.self, forCellReuseIdentifier: MainStoryTableViewCell.identifier)
         tableView.register(StoryTableViewCell.self, forCellReuseIdentifier: StoryTableViewCell.identifier)
         tableView.register(WeblinkTableViewCell.self, forCellReuseIdentifier: WeblinkTableViewCell.identifier)
         tableView.register(AdvertTableViewCell.self, forCellReuseIdentifier: AdvertTableViewCell.identifier)
 
+        tableView.separatorColor = .clear
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 600
         tableView.dataSource = nil
@@ -78,20 +78,33 @@ extension StoryListViewController {
 
     private func setupBindings() {
         viewModel.title
-            .drive(navigationItem.rx.title)
+            .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
 
-        if let refreshControl = refreshControl {
-            viewModel.isFetching
-                .drive(refreshControl.rx.isRefreshing)
-                .disposed(by: disposeBag)
-        }
+        viewModel.isFetching
+            .subscribe(onNext: { [weak self] isFetching in
+                self?.showLoading(isFetching)
+            })
+            .disposed(by: disposeBag)
 
         let dataSource = RxTableViewSectionedAnimatedDataSource<StoriesSection>(configureCell: configureCell)
         self.dataSource = dataSource
 
         viewModel.sections
-            .drive(tableView.rx.items(dataSource: dataSource))
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+
+        viewModel.sections
+            .take(1)
+            .subscribe(onNext: { [weak self] _ in
+                self?.addRefreshControl()
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.fetchError
+            .subscribe(onNext: { [weak self] error in
+                self?.displayError(error)
+            })
             .disposed(by: disposeBag)
 
         tableView.rx.setDelegate(self)
@@ -103,6 +116,25 @@ extension StoryListViewController {
             })
             .disposed(by: disposeBag)
     }
+
+    private func addRefreshControl() {
+        guard self.refreshControl == nil else {
+            return
+        }
+
+        let refreshControl = UIRefreshControl()
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.fetch()
+            })
+            .disposed(by: disposeBag)
+
+        self.refreshControl = refreshControl
+    }
+
+}
+
+extension StoryListViewController {
 
     private func configureCell(dataSource: TableViewSectionedDataSource<StoriesSection>, tableView: UITableView,
                                indexPath: IndexPath, item: StoryListItemViewModel) -> UITableViewCell {
@@ -167,6 +199,49 @@ extension StoryListViewController {
         default:
             return
         }
+    }
+
+}
+
+extension StoryListViewController {
+
+    private func showLoading(_ loading: Bool) {
+        if !loading {
+            tableView.separatorColor = .separator
+            tableView.backgroundView = nil
+        }
+
+        if let refreshControl = self.refreshControl {
+            if loading {
+                refreshControl.beginRefreshing()
+            } else {
+                refreshControl.endRefreshing()
+            }
+
+            return
+        }
+
+        tableView.separatorColor = .clear
+        tableView.backgroundView = LoadingView(message: NSLocalizedString("Loading", comment: "Loading"))
+    }
+
+    private func displayError(_ error: Error?) {
+        tableView.backgroundView = nil
+
+        guard error != nil else {
+            return
+        }
+
+        let errorView = ErrorView(
+            title: NSLocalizedString("What a CATastrophe", comment: "What a CATastrophe"),
+            message: NSLocalizedString("There's been a problem fetching the latest news articles",
+                                       comment: "There's been a problem fetching the latest news articles"),
+            retryHandler: { [weak self] in
+                self?.viewModel.fetch()
+            }
+        )
+        tableView.backgroundView = errorView
+        tableView.separatorColor = .clear
     }
 
 }

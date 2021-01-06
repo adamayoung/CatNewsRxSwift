@@ -30,6 +30,23 @@
 		6F186B4525A610A000F650DE /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 6F186B4425A610A000F650DE /* RxDataSources */; };
 		6F186B4A25A614C900F650DE /* StoryListItemViewModel+RxDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B4925A614C900F650DE /* StoryListItemViewModel+RxDataSources.swift */; };
 		6F186B5225A615D800F650DE /* StoriesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5125A615D800F650DE /* StoriesSection.swift */; };
+		6F186B5F25A6461C00F650DE /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5A25A6461B00F650DE /* StoryViewModel.swift */; };
+		6F186B6025A6461C00F650DE /* StoryContentItem+StoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5B25A6461C00F650DE /* StoryContentItem+StoryContent.swift */; };
+		6F186B6125A6461C00F650DE /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5C25A6461C00F650DE /* StoryView.swift */; };
+		6F186B6225A6461C00F650DE /* StoryContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5D25A6461C00F650DE /* StoryContentItem.swift */; };
+		6F186B6325A6461C00F650DE /* StoryViewModel+Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B5E25A6461C00F650DE /* StoryViewModel+Story.swift */; };
+		6F186B6D25A646A600F650DE /* StoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B6B25A646A600F650DE /* StoryHeaderView.swift */; };
+		6F186B6E25A646A600F650DE /* StoryHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B6C25A646A600F650DE /* StoryHeaderViewModel.swift */; };
+		6F186B7425A646C300F650DE /* StorySubheaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B7225A646C300F650DE /* StorySubheaderViewModel.swift */; };
+		6F186B7525A646C300F650DE /* StorySubheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B7325A646C300F650DE /* StorySubheaderView.swift */; };
+		6F186B7C25A646D100F650DE /* StoryParagraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B7925A646D100F650DE /* StoryParagraphViewModel.swift */; };
+		6F186B7D25A646D100F650DE /* StoryParagraphViewModel+StoryParagraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B7A25A646D100F650DE /* StoryParagraphViewModel+StoryParagraph.swift */; };
+		6F186B7E25A646D100F650DE /* StoryParagraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B7B25A646D100F650DE /* StoryParagraphView.swift */; };
+		6F186B8525A646EB00F650DE /* StoryImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B8225A646EB00F650DE /* StoryImageViewModel.swift */; };
+		6F186B8625A646EB00F650DE /* StoryImageViewModel+StoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B8325A646EB00F650DE /* StoryImageViewModel+StoryImage.swift */; };
+		6F186B8725A646EB00F650DE /* StoryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B8425A646EB00F650DE /* StoryImageView.swift */; };
+		6F186B8E25A64D3400F650DE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B8C25A64D3300F650DE /* ErrorView.swift */; };
+		6F186B8F25A64D3400F650DE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F186B8D25A64D3400F650DE /* LoadingView.swift */; };
 		6F33807025A5EFF300EF7A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F33806F25A5EFF300EF7A0E /* AppDelegate.swift */; };
 		6F33807225A5EFF300EF7A0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F33807125A5EFF300EF7A0E /* SceneDelegate.swift */; };
 		6F33807925A5EFF500EF7A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F33807825A5EFF500EF7A0E /* Assets.xcassets */; };
@@ -83,6 +100,23 @@
 		6F186B3C25A60AE800F650DE /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		6F186B4925A614C900F650DE /* StoryListItemViewModel+RxDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoryListItemViewModel+RxDataSources.swift"; sourceTree = "<group>"; };
 		6F186B5125A615D800F650DE /* StoriesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesSection.swift; sourceTree = "<group>"; };
+		6F186B5A25A6461B00F650DE /* StoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		6F186B5B25A6461C00F650DE /* StoryContentItem+StoryContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryContentItem+StoryContent.swift"; sourceTree = "<group>"; };
+		6F186B5C25A6461C00F650DE /* StoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		6F186B5D25A6461C00F650DE /* StoryContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryContentItem.swift; sourceTree = "<group>"; };
+		6F186B5E25A6461C00F650DE /* StoryViewModel+Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryViewModel+Story.swift"; sourceTree = "<group>"; };
+		6F186B6B25A646A600F650DE /* StoryHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryHeaderView.swift; sourceTree = "<group>"; };
+		6F186B6C25A646A600F650DE /* StoryHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryHeaderViewModel.swift; sourceTree = "<group>"; };
+		6F186B7225A646C300F650DE /* StorySubheaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySubheaderViewModel.swift; sourceTree = "<group>"; };
+		6F186B7325A646C300F650DE /* StorySubheaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySubheaderView.swift; sourceTree = "<group>"; };
+		6F186B7925A646D100F650DE /* StoryParagraphViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryParagraphViewModel.swift; sourceTree = "<group>"; };
+		6F186B7A25A646D100F650DE /* StoryParagraphViewModel+StoryParagraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryParagraphViewModel+StoryParagraph.swift"; sourceTree = "<group>"; };
+		6F186B7B25A646D100F650DE /* StoryParagraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryParagraphView.swift; sourceTree = "<group>"; };
+		6F186B8225A646EB00F650DE /* StoryImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryImageViewModel.swift; sourceTree = "<group>"; };
+		6F186B8325A646EB00F650DE /* StoryImageViewModel+StoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoryImageViewModel+StoryImage.swift"; sourceTree = "<group>"; };
+		6F186B8425A646EB00F650DE /* StoryImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryImageView.swift; sourceTree = "<group>"; };
+		6F186B8C25A64D3300F650DE /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		6F186B8D25A64D3400F650DE /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6F33806C25A5EFF300EF7A0E /* CatNewsRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNewsRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F33806F25A5EFF300EF7A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F33807125A5EFF300EF7A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +190,7 @@
 			children = (
 				6F186B0F25A6002A00F650DE /* StoryDetailViewController.swift */,
 				6F186B1425A6006900F650DE /* StoryDetailViewModel.swift */,
+				6F186B5925A6460300F650DE /* Story */,
 			);
 			path = StoryDetail;
 			sourceTree = "<group>";
@@ -177,6 +212,76 @@
 				6F186B3C25A60AE800F650DE /* DateFormatter+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6F186B5925A6460300F650DE /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B5C25A6461C00F650DE /* StoryView.swift */,
+				6F186B5A25A6461B00F650DE /* StoryViewModel.swift */,
+				6F186B5E25A6461C00F650DE /* StoryViewModel+Story.swift */,
+				6F186B5D25A6461C00F650DE /* StoryContentItem.swift */,
+				6F186B5B25A6461C00F650DE /* StoryContentItem+StoryContent.swift */,
+				6F186B6725A6465200F650DE /* StoryHeader */,
+				6F186B6825A6465A00F650DE /* StorySubheader */,
+				6F186B6925A6466D00F650DE /* StoryParagraph */,
+				6F186B6A25A6467D00F650DE /* StoryImage */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		6F186B6725A6465200F650DE /* StoryHeader */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B6B25A646A600F650DE /* StoryHeaderView.swift */,
+				6F186B6C25A646A600F650DE /* StoryHeaderViewModel.swift */,
+			);
+			path = StoryHeader;
+			sourceTree = "<group>";
+		};
+		6F186B6825A6465A00F650DE /* StorySubheader */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B7325A646C300F650DE /* StorySubheaderView.swift */,
+				6F186B7225A646C300F650DE /* StorySubheaderViewModel.swift */,
+			);
+			path = StorySubheader;
+			sourceTree = "<group>";
+		};
+		6F186B6925A6466D00F650DE /* StoryParagraph */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B7B25A646D100F650DE /* StoryParagraphView.swift */,
+				6F186B7925A646D100F650DE /* StoryParagraphViewModel.swift */,
+				6F186B7A25A646D100F650DE /* StoryParagraphViewModel+StoryParagraph.swift */,
+			);
+			path = StoryParagraph;
+			sourceTree = "<group>";
+		};
+		6F186B6A25A6467D00F650DE /* StoryImage */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B8425A646EB00F650DE /* StoryImageView.swift */,
+				6F186B8225A646EB00F650DE /* StoryImageViewModel.swift */,
+				6F186B8325A646EB00F650DE /* StoryImageViewModel+StoryImage.swift */,
+			);
+			path = StoryImage;
+			sourceTree = "<group>";
+		};
+		6F186B8B25A64D1F00F650DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F186B8D25A64D3400F650DE /* LoadingView.swift */,
+				6F186B8C25A64D3300F650DE /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F186B9625A664B900F650DE /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 		6F33806325A5EFF300EF7A0E = {
@@ -209,7 +314,9 @@
 				6F33807125A5EFF300EF7A0E /* SceneDelegate.swift */,
 				6F3380FA25A5F20E00EF7A0E /* DIContainer.swift */,
 				6F3380EE25A5F1A600EF7A0E /* Scenes */,
+				6F186B8B25A64D1F00F650DE /* Views */,
 				6F186B3B25A60AD000F650DE /* Extensions */,
+				6F186B9625A664B900F650DE /* Testing */,
 				6F3380EF25A5F1BC00EF7A0E /* Logging.swift */,
 				6F33807825A5EFF500EF7A0E /* Assets.xcassets */,
 				6F33807D25A5EFF500EF7A0E /* Info.plist */,
@@ -407,24 +514,41 @@
 				6F186B2525A6037D00F650DE /* StoryListAdvertViewModel.swift in Sources */,
 				6F33807025A5EFF300EF7A0E /* AppDelegate.swift in Sources */,
 				6F186B1025A6002A00F650DE /* StoryDetailViewController.swift in Sources */,
+				6F186B6025A6461C00F650DE /* StoryContentItem+StoryContent.swift in Sources */,
+				6F186B8F25A64D3400F650DE /* LoadingView.swift in Sources */,
 				6F3380FB25A5F20E00EF7A0E /* DIContainer.swift in Sources */,
 				6F186B2825A6037D00F650DE /* StoryListStoryViewModel+StoryCollectionStory.swift in Sources */,
 				6F186B2425A6037D00F650DE /* StoryListWeblinkViewModel.swift in Sources */,
+				6F186B7E25A646D100F650DE /* StoryParagraphView.swift in Sources */,
 				6F33807225A5EFF300EF7A0E /* SceneDelegate.swift in Sources */,
 				6F186AEE25A5FEEE00F650DE /* Coordinating.swift in Sources */,
+				6F186B7C25A646D100F650DE /* StoryParagraphViewModel.swift in Sources */,
+				6F186B6125A6461C00F650DE /* StoryView.swift in Sources */,
+				6F186B6E25A646A600F650DE /* StoryHeaderViewModel.swift in Sources */,
 				6F186B0B25A5FFB400F650DE /* StoryListViewModel.swift in Sources */,
+				6F186B5F25A6461C00F650DE /* StoryViewModel.swift in Sources */,
 				6F186B2325A6037D00F650DE /* StoryListItemViewModel.swift in Sources */,
+				6F186B7425A646C300F650DE /* StorySubheaderViewModel.swift in Sources */,
+				6F186B6325A6461C00F650DE /* StoryViewModel+Story.swift in Sources */,
 				6F186B2225A6037D00F650DE /* StoryListStoryViewModel.swift in Sources */,
+				6F186B6225A6461C00F650DE /* StoryContentItem.swift in Sources */,
 				6F186B2725A6037D00F650DE /* StoryListWeblinkViewModel+StoryCollectionWeblink.swift in Sources */,
+				6F186B8E25A64D3400F650DE /* ErrorView.swift in Sources */,
+				6F186B8725A646EB00F650DE /* StoryImageView.swift in Sources */,
+				6F186B8525A646EB00F650DE /* StoryImageViewModel.swift in Sources */,
 				6F3380F025A5F1BC00EF7A0E /* Logging.swift in Sources */,
 				6F186B3D25A60AE800F650DE /* DateFormatter+Extensions.swift in Sources */,
 				6F186B5225A615D800F650DE /* StoriesSection.swift in Sources */,
+				6F186B8625A646EB00F650DE /* StoryImageViewModel+StoryImage.swift in Sources */,
 				6F186B2125A6037D00F650DE /* StoryListItemViewModel+StoryCollectionItem.swift in Sources */,
 				6F186B2625A6037D00F650DE /* StoryListAdvertViewModel+StoryCollectionAdvert.swift in Sources */,
 				6F186B3625A60ABA00F650DE /* WeblinkTableViewCell.swift in Sources */,
+				6F186B6D25A646A600F650DE /* StoryHeaderView.swift in Sources */,
 				6F186B3425A60ABA00F650DE /* StoryTableViewCell.swift in Sources */,
+				6F186B7525A646C300F650DE /* StorySubheaderView.swift in Sources */,
 				6F186B3725A60ABA00F650DE /* AdvertTableViewCell.swift in Sources */,
 				6F186B3525A60ABA00F650DE /* MainStoryTableViewCell.swift in Sources */,
+				6F186B7D25A646D100F650DE /* StoryParagraphViewModel+StoryParagraph.swift in Sources */,
 				6F186B1525A6006900F650DE /* StoryDetailViewModel.swift in Sources */,
 				6F186B0325A5FF9100F650DE /* StoryListViewController.swift in Sources */,
 				6F186AF625A5FF0100F650DE /* RootCoordinator.swift in Sources */,

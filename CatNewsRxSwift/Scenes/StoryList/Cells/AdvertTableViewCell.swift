@@ -14,7 +14,7 @@ final class AdvertTableViewCell: UITableViewCell {
 
     var viewModel: StoryListAdvertViewModeling? {
         didSet {
-            accessibilityLabel = "Advert"
+            accessibilityValue = viewModel?.url.absoluteString ?? ""
             advertImageView.sd_setImage(with: viewModel?.url)
         }
     }
@@ -25,11 +25,14 @@ final class AdvertTableViewCell: UITableViewCell {
         imageView.backgroundColor = .secondarySystemFill
         imageView.clipsToBounds = true
         imageView.sd_imageTransition = SDWebImageTransition.fade
+        imageView.accessibilityLabel = NSLocalizedString("Advert image", comment: "Advert image")
         return imageView
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        accessibilityLabel = "Advert"
 
         contentView.addSubview(advertImageView)
         advertImageView.translatesAutoresizingMaskIntoConstraints = false

@@ -14,7 +14,7 @@ final class WeblinkTableViewCell: UITableViewCell {
 
     var viewModel: StoryListWeblinkViewModeling? {
         didSet {
-            accessibilityLabel = "\(viewModel?.headline ?? "")"
+            accessibilityValue = "\(viewModel?.headline ?? "")"
             weblinkImageView.sd_setImage(with: viewModel?.imageURL)
             weblinkImageView.accessibilityLabel = viewModel?.imageAccessibilityText
             headlineLabel.text = viewModel?.headline
@@ -35,6 +35,7 @@ final class WeblinkTableViewCell: UITableViewCell {
         imageView.backgroundColor = .secondarySystemFill
         imageView.clipsToBounds = true
         imageView.sd_imageTransition = SDWebImageTransition.fade
+        imageView.accessibilityLabel = NSLocalizedString("Weblink image", comment: "Weblink image")
         return imageView
     }()
 
@@ -64,6 +65,8 @@ final class WeblinkTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        accessibilityLabel = NSLocalizedString("Weblink item", comment: "Weblink item")
 
         contentView.layoutMargins.top *= 2
         contentView.layoutMargins.bottom *= 2

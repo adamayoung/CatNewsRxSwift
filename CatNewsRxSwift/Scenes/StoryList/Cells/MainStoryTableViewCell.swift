@@ -14,9 +14,9 @@ final class MainStoryTableViewCell: UITableViewCell {
 
     var viewModel: StoryListStoryViewModeling? {
         didSet {
-            accessibilityLabel = "\(viewModel?.headline ?? "")"
+            accessibilityValue = "\(viewModel?.headline ?? "")"
             storyImageView.sd_setImage(with: viewModel?.imageURL)
-            storyImageView.accessibilityLabel = viewModel?.imageAccessibilityText
+            storyImageView.accessibilityValue = viewModel?.imageAccessibilityText
             headlineLabel.text = viewModel?.headline
             teaserTextLabel.text = viewModel?.teaserText
             dateLabel.text = {
@@ -35,6 +35,7 @@ final class MainStoryTableViewCell: UITableViewCell {
         imageView.backgroundColor = UIColor.secondarySystemFill
         imageView.clipsToBounds = true
         imageView.sd_imageTransition = SDWebImageTransition.fade
+        imageView.accessibilityLabel = NSLocalizedString("Story image", comment: "Story image")
         return imageView
     }()
 
@@ -61,6 +62,8 @@ final class MainStoryTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
+        accessibilityLabel = NSLocalizedString("Main Story item", comment: "Main Story item")
 
         contentView.layoutMargins.top *= 2
         contentView.layoutMargins.bottom *= 2

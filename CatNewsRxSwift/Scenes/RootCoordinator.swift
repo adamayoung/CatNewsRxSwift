@@ -55,7 +55,8 @@ extension RootCoordinator {
     func showWebLink(_ url: URL) {
         os_log("Viewing weblink %@", log: .app, url.absoluteString)
         let viewController = SFSafariViewController(url: url)
-        viewController.view.accessibilityLabel = "Web view - \(url.absoluteString)"
+        viewController.view.accessibilityLabel = "Weblink view"
+        viewController.view.accessibilityLabel = "url.absoluteString"
         navigationController.present(viewController, animated: true, completion: nil)
     }
 

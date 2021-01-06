@@ -8,14 +8,14 @@
 import CatNewsCore
 import Foundation
 import os.log
-import RxCocoa
 import RxSwift
 
 protocol StoryListViewModeling {
 
-    var title: Driver<String> { get }
-    var sections: Driver<[StoriesSection]> { get }
-    var isFetching: Driver<Bool> { get }
+    var title: Observable<String> { get }
+    var sections: Observable<[StoriesSection]> { get }
+    var isFetching: Observable<Bool> { get }
+    var fetchError: Observable<Error?> { get }
 
     func fetch()
 
@@ -23,16 +23,20 @@ protocol StoryListViewModeling {
 
 final class StoryListViewModel: StoryListViewModeling {
 
-    var title: Driver<String> {
-        titleSubject.asDriver(onErrorJustReturn: "")
+    var title: Observable<String> {
+        titleSubject.asObservable()
     }
 
-    var sections: Driver<[StoriesSection]> {
-        sectionsSubject.asDriver(onErrorJustReturn: [])
+    var sections: Observable<[StoriesSection]> {
+        sectionsSubject.asObservable()
     }
 
-    var isFetching: Driver<Bool> {
-        isFetchingSubject.asDriver(onErrorJustReturn: false)
+    var isFetching: Observable<Bool> {
+        isFetchingSubject.asObservable()
+    }
+
+    var fetchError: Observable<Error?> {
+        fetchErrorSubject.asObservable()
     }
 
     private let disposeBag = DisposeBag()
@@ -40,14 +44,20 @@ final class StoryListViewModel: StoryListViewModeling {
     private let titleSubject = PublishSubject<String>()
     private let sectionsSubject = PublishSubject<[StoriesSection]>()
     private let isFetchingSubject = BehaviorSubject(value: false)
+    private let fetchErrorSubject = PublishSubject<Error?>()
 
     init(newsStore: NewsStore) {
         self.newsStore = newsStore
     }
 
     func fetch() {
+        guard !((try? isFetchingSubject.value()) ?? false) else {
+            return
+        }
+
         os_log("Fetching stories...", log: .app)
 
+        fetchErrorSubject.onNext(nil)
         isFetchingSubject.onNext(true)
 
         newsStore.fetchStoryCollection()
@@ -58,8 +68,11 @@ final class StoryListViewModel: StoryListViewModeling {
                 let section = StoriesSection(header: "Stories", items: items)
                 self?.sectionsSubject.onNext([section])
                 self?.isFetchingSubject.onNext(false)
+                os_log("Fetched %d stories", log: .app, storyCollection.data.count)
             }, onFailure: { [weak self] error in
                 self?.isFetchingSubject.onNext(false)
+                self?.fetchErrorSubject.onNext(error)
+                os_log("Error fetching stories: %@", log: .app, type: .error, error.localizedDescription)
             })
             .disposed(by: disposeBag)
     }
