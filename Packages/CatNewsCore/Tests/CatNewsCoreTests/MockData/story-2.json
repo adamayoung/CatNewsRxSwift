@@ -1,0 +1,45 @@
+{
+    "id": "2",
+    "headline": "'Hero' dog-walker saves cat from drowning after animal is flung into dyke from moving car",
+    "heroImage": {
+        "imageUrl": "https://static.independent.co.uk/2020/12/05/11/Honey.jpg",
+        "accessibilityText": "Honey the cat"
+    },
+    "creationDate": "2020-12-02T10:11:56Z",
+    "modifiedDate": "2020-12-02T10:11:56Z",
+    "contents": [
+        {
+            "type": "paragraph",
+            "text": "A drowning cat thrown from a moving car into a South Yorkshire dyke was only saved after an onlooker dived into the water to rescue the animal."
+        },
+        {
+            "type": "paragraph",
+            "text": "The long-haired female ginger was chucked from a black Honda into Mill Dyke in the town of Doncaster."
+        },
+        {
+            "type": "paragraph",
+            "text": "But she survived the ordeal after a passing dog-walker plunged into the shallow water to fish her out."
+        },
+        {
+            "type": "paragraph",
+            "text": "\"Had he not intervened I am sure she would have not survived,\" said Graeme Petty, an animal rescuer inspector with the RSPCA. \"His heroic actions saved her life.\""
+        },
+        {
+            "type": "image",
+            "url": "https://i.ytimg.com/vi/ny5vGbTfB8c/maxresdefault.jpg",
+            "accessibilityText": "Honey the cat jumping"
+        },
+        {
+            "type": "paragraph",
+            "text": "He added: \"For a person to callously throw a neglected cat into water to an almost certain death is absolutely awful."
+        },
+        {
+            "type": "paragraph",
+            "text": "\"There is about 15ft of land before you reach the water – so it seems someone has made a real effort to try and drown her.\""
+        },
+        {
+            "type": "paragraph",
+            "text": "The animal charity is now looking after the cat – which staff have nicknamed Honey – at its Doncaster and Rotherham branch in Bawtry. It says it is is trying to trace the towner."
+        }
+    ]
+}

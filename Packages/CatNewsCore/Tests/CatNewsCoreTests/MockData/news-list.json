@@ -1,0 +1,99 @@
+{
+    "title": "Cat News",
+    "data": [
+        {
+            "id": "1",
+            "type": "story",
+            "headline": "Canterbury mystery: Is it a cat or is it a panther?",
+            "teaserText": "Canterbury's big cat mystery has deepened after another sighting of an animal that may be a cat or may be a panther cub.",
+            "creationDate": "2020-12-07T13:53:11Z",
+            "modifiedDate": "2020-12-07T13:53:11Z",
+            "teaserImage": {
+                "_links": {
+                    "url": {
+                        "href": "https://i.ytimg.com/vi/zPCZWn_iWb0/maxresdefault.jpg",
+                        "templated": true,
+                        "type": "image/jpeg"
+                    }
+                },
+                "accessibilityText": "Scared cat"
+            }
+        },
+        {
+            "id": "2",
+            "type": "story",
+            "headline": "'Hero' dog-walker saves cat from drowning after animal is flung into dyke from moving car",
+            "teaserText": "A drowning cat thrown from a moving car into a South Yorkshire dyke was only saved after an onlooker dived into the water to rescue the animal.",
+            "creationDate": "2020-12-02T10:11:56Z",
+            "modifiedDate": "2020-12-02T10:11:56Z",
+            "teaserImage": {
+                "_links": {
+                    "url": {
+                        "href": "https://static.independent.co.uk/2020/12/05/11/Honey.jpg",
+                        "templated": true,
+                        "type": "image/jpeg"
+                    }
+                },
+                "accessibilityText": "Honey"
+            }
+        },
+        {
+            "type": "advert",
+            "url": "https://x4.sdimgs.com/sd_static/u/201309/523a8265dc4b6.jpg"
+        },
+        {
+            "id": "3",
+            "type": "weblink",
+            "headline": "Cats Protection",
+            "weblinkUrl": "https://www.cats.org.uk",
+            "creationDate": "2020-11-29T16:39:11Z",
+            "modifiedDate": "2020-11-29T16:39:11Z",
+            "teaserImage": {
+                "_links": {
+                    "url": {
+                        "href": "https://3.bp.blogspot.com/-5ye7CWwu0WM/VazkTZek2CI/AAAAAAAABL0/4bxqFfoaBuo/s1600/kitten-in-bowl-415px.jpg",
+                        "templated": true,
+                        "type": "image/jpeg"
+                    }
+                },
+                "accessibilityText": "Kitten standing in bowl"
+            }
+        },
+        {
+            "id": "4",
+            "type": "story",
+            "headline": "How to get your cat to like you, according to science",
+            "teaserText": "Cats may be notoriously difficult to befriend, but a new study has found that there might be a simple trick to solving this problem.",
+            "creationDate": "2020-11-29T10:56:34Z",
+            "modifiedDate": "2020-11-29T10:56:34Z",
+            "teaserImage": {
+                "_links": {
+                    "url": {
+                        "href": "https://static.independent.co.uk/2020/10/08/10/iStock-1216783007.jpg",
+                        "templated": true,
+                        "type": "image/jpeg"
+                    }
+                },
+                "accessibilityText": "Happy Cat"
+            }
+        },
+        {
+            "id": "5",
+            "type": "weblink",
+            "headline": "Cats @ Amazon",
+            "weblinkUrl": "https://www.amazon.co.uk/s?k=cats",
+            "creationDate": "2020-11-28T18:21:11Z",
+            "modifiedDate": "2020-11-28T18:21:11Z",
+            "teaserImage": {
+                "_links": {
+                    "url": {
+                        "href": "https://brandstruck.co/wp-content/uploads/2016/07/Amazon-logo.jpg",
+                        "templated": true,
+                        "type": "image/jpeg"
+                    }
+                },
+                "accessibilityText": "Amazon logo"
+            }
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "id": "4",
+    "headline": "How to get your cat to like you, according to science",
+    "heroImage": {
+        "imageUrl": "https://static.independent.co.uk/2020/10/08/10/iStock-1216783007.jpg",
+        "accessibilityText": "Happy Cat"
+    },
+    "creationDate": "2020-11-29T10:56:34Z",
+    "modifiedDate": "2020-11-29T10:56:34Z",
+    "contents": [
+        {
+            "type": "paragraph",
+            "text": "Cats may be notoriously difficult to befriend, but a new study has found that there might be a simple trick to solving this problem."
+        },
+        {
+            "type": "paragraph",
+            "text": "According to research published in Scientific Reports, cats are one of several animals that respond to the so-called Duchenne smile, which is defined as a natural smile that sees people raise the corners of their mouth and create crow’s feet around the eyes."
+        },
+        {
+            "type": "paragraph",
+            "text": "When humans smile at their cats in this way and blink their eyes in slow motion, the cat is likely to respond positively, the study, conducted by researchers at the Universities of Sussex and Portsmouth found."
+        },
+        {
+            "type": "paragraph",
+            "text": "The cats were also found to mirror the humans’ slow-blink."
+        },
+        {
+            "type": "image",
+            "url": "https://static.boredpanda.com/blog/wp-content/uploads/2015/09/Happy-Cats__880.jpg",
+            "accessibilityText": "Very happy cat"
+        },
+        {
+            "type": "paragraph",
+            "text": "The researchers conducted two experiments to reach their findings.In the first, they looked at 21 cats from 14 different households."
+        },
+        {
+            "type": "paragraph",
+            "text": "They found that these cats were more likely to respond positively to their owners after they slow-blinked at them compared to when they remained passive."
+        },
+        {
+            "type": "paragraph",
+            "text": "In the second experiment,  45 cats aged between one and 17 were examined."
+        },
+        {
+            "type": "image",
+            "url": "https://static.boredpanda.com/blog/wp-content/uploads/2016/04/smiling-animals-8-570e0c1b0703c__605.jpg",
+            "accessibilityText": "Smiling cat"
+        },
+        {
+            "type": "paragraph",
+            "text": "They were found to be more likely to approach the outstretched hand of a stranger after they had slow-blinked at them, compared to when the stranger maintained a neutral expression."
+        },
+        {
+            "type": "paragraph",
+            "text": "\"Taken together, the study shows that this slow blinking technique can provide a form of positive communication between cats and humans,\" the researchers wrote."
+        }
+    ]
+}

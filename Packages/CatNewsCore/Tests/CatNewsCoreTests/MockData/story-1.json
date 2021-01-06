@@ -1,0 +1,33 @@
+{
+    "id": "1",
+    "headline": "Canterbury mystery: Is it a cat or is it a panther?",
+    "heroImage": {
+        "imageUrl": "https://i.ytimg.com/vi/zPCZWn_iWb0/maxresdefault.jpg",
+        "accessibilityText": "Scared cat"
+    },
+    "creationDate": "2020-12-07T13:53:11Z",
+    "modifiedDate": "2020-12-07T13:53:11Z",
+    "contents": [
+        {
+            "type": "paragraph",
+            "text": "Canterbury's big cat mystery has deepened after another sighting of an animal that may be a cat or may be a panther cub."
+        },
+        {
+            "type": "paragraph",
+            "text": "Social influencer Bare Kiwi, aka Kyle Mulinder, has caught the black animal on video while interviewing double-amputee Everest mountaineer Mark Inglis in the Hanmer Springs Heritage Forest."
+        },
+        {
+            "type": "image",
+            "url": "https://d.ibtimes.co.uk/en/full/400105/large-panther-like-cat-was-caught-camera-it-ate-prey-murhill-woods-wiltshire-herbert-smith.jpg",
+            "accessibilityText": "Panther"
+        },
+        {
+            "type": "paragraph",
+            "text": "\"It was about 50 metres away, strolling in the other direction but it sat down, turned and looked into my soul,\" Mulinder said in a statement released by Visit Hurunui."
+        },
+        {
+            "type": "paragraph",
+            "text": "\"It was a very emotional experience. I was fearing for my life – it was a very close call.\""
+        }
+    ]
+}
