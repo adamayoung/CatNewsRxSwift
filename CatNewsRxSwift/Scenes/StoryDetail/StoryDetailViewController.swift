@@ -61,7 +61,8 @@ extension StoryDetailViewController {
     private func setupBinding() {
         viewModel.story
             .map(\.headline)
-            .bind(to: navigationItem.rx.title)
+            .asDriver(onErrorJustReturn: "")
+            .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
 
         viewModel.story

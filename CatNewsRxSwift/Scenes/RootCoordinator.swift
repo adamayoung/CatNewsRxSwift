@@ -27,13 +27,13 @@ final class RootCoordinator: RootCoordinating {
     func start() {
         os_log("Starting root coordinator", log: .app)
         let viewController: StoryListViewController = diContainer.resolve()
-        viewController.didSelectStory
+        viewController.selectedStory
             .subscribe { [weak self] storyID in
                 self?.showStory(storyID)
             }
             .disposed(by: disposeBag)
 
-        viewController.didSelectWebLink
+        viewController.selectedWebLink
             .subscribe { [weak self] url in
                 self?.showWebLink(url)
             }
@@ -46,17 +46,17 @@ final class RootCoordinator: RootCoordinating {
 
 extension RootCoordinator {
 
-    func showStory(_ storyID: String) {
+    private func showStory(_ storyID: String) {
         os_log("Viewing story %@", log: .app, storyID)
         let viewController: StoryDetailViewController = diContainer.resolve(storyID: storyID)
         navigationController.pushViewController(viewController, animated: true)
     }
 
-    func showWebLink(_ url: URL) {
+    private func showWebLink(_ url: URL) {
         os_log("Viewing weblink %@", log: .app, url.absoluteString)
         let viewController = SFSafariViewController(url: url)
         viewController.view.accessibilityLabel = "Weblink view"
-        viewController.view.accessibilityLabel = "url.absoluteString"
+        viewController.view.accessibilityValue = url.absoluteString
         navigationController.present(viewController, animated: true, completion: nil)
     }
 

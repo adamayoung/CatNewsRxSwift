@@ -14,9 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var diContainer: DIContainer = {
         let arguments = ProcessInfo.processInfo.arguments
         let isUITest = arguments.contains("UI_TEST")
-//        if isUITest {
-//            return MockDIContainer()
-//        }
+        if isUITest {
+            return MockDIContainer()
+        }
 
         return DIContainer()
     }()

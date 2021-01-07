@@ -69,7 +69,6 @@ final class StoryTableViewCell: UITableViewCell {
 
         contentView.layoutMargins.top *= 2
         contentView.layoutMargins.bottom *= 2
-
         contentView.addSubview(storyImageView)
         storyImageView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addConstraints([

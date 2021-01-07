@@ -1,4 +1,5 @@
 @testable import CatNewsCore
+import RxSwift
 import XCTest
 
 final class MockHTTPClient: HTTPClient {
@@ -7,20 +8,25 @@ final class MockHTTPClient: HTTPClient {
     var getResponse: Decodable?
     var getError: Error?
 
-    func get<Response: Decodable>(_ endpoint: Endpoint, completion: @escaping (Result<Response, Error>) -> Void) {
+    func get<Response: Decodable>(_ endpoint: Endpoint) -> Single<Response> {
         lastEndpoint = endpoint
-        DispatchQueue.main.async { [weak self] in
-            if let error = self?.getError {
-                completion(.failure(error))
-                return
+
+        return Single.create { single in
+            DispatchQueue.main.async { [weak self] in
+                if let error = self?.getError {
+                    single(.failure(error))
+                    return
+                }
+
+                guard let response = self?.getResponse as? Response else {
+                    XCTFail("Can't cast response to type \(String(describing: Response.self))")
+                    return
+                }
+
+                single(.success(response))
             }
 
-            guard let response = self?.getResponse as? Response else {
-                XCTFail("Can't cast response to type \(String(describing: Response.self))")
-                return
-            }
-
-            completion(.success(response))
+            return Disposables.create { }
         }
     }
 

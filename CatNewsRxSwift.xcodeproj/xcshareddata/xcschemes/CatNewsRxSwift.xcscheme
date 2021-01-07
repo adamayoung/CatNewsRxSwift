@@ -26,7 +26,25 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6F33806B25A5EFF300EF7A0E"
+            BuildableName = "CatNewsRxSwift.app"
+            BlueprintName = "CatNewsRxSwift"
+            ReferencedContainer = "container:CatNewsRxSwift.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "CatNewsCore"
+            BuildableName = "CatNewsCore"
+            BlueprintName = "CatNewsCore"
+            ReferencedContainer = "container:Packages/CatNewsCore">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -46,6 +64,16 @@
                BuildableName = "CatNewsRxSwiftUITests.xctest"
                BlueprintName = "CatNewsRxSwiftUITests"
                ReferencedContainer = "container:CatNewsRxSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CatNewsCoreTests"
+               BuildableName = "CatNewsCoreTests"
+               BlueprintName = "CatNewsCoreTests"
+               ReferencedContainer = "container:Packages/CatNewsCore">
             </BuildableReference>
          </TestableReference>
       </Testables>

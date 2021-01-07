@@ -14,7 +14,7 @@ final class StoryCollectionTests: XCTestCase {
     }
 
     func testStoryCollectionJSONDecode() throws {
-        let expectedTitle = "Sky Cat News"
+        let expectedTitle = "Cat News"
         let expectedDataCount = 6
 
         guard let url = Bundle.module.url(forResource: "MockData/news-list", withExtension: "json") else {

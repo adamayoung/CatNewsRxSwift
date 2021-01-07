@@ -13,18 +13,18 @@ import UIKit
 
 final class StoryListViewController: UITableViewController {
 
-    var didSelectStory: Observable<String> {
-        selectStorySubject.asObservable()
+    var selectedStory: Observable<String> {
+        selectedStorySubject.asObservable()
     }
 
-    var didSelectWebLink: Observable<URL> {
-        selectWebLinkSubject.asObservable()
+    var selectedWebLink: Observable<URL> {
+        selecedtWebLinkSubject.asObservable()
     }
 
     private let disposeBag = DisposeBag()
     private let viewModel: StoryListViewModeling
-    private let selectStorySubject = PublishSubject<String>()
-    private let selectWebLinkSubject = PublishSubject<URL>()
+    private let selectedStorySubject = PublishSubject<String>()
+    private let selecedtWebLinkSubject = PublishSubject<URL>()
 
     private var dataSource: RxTableViewSectionedAnimatedDataSource<StoriesSection>?
 
@@ -78,7 +78,8 @@ extension StoryListViewController {
 
     private func setupBindings() {
         viewModel.title
-            .bind(to: navigationItem.rx.title)
+            .asDriver(onErrorJustReturn: "")
+            .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
 
         viewModel.isFetching
@@ -91,7 +92,8 @@ extension StoryListViewController {
         self.dataSource = dataSource
 
         viewModel.sections
-            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .asDriver(onErrorJustReturn: [])
+            .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
 
         viewModel.sections
@@ -191,10 +193,10 @@ extension StoryListViewController {
 
         switch item {
         case .story(let viewModel):
-            selectStorySubject.onNext(viewModel.id)
+            selectedStorySubject.onNext(viewModel.id)
 
         case .weblink(let viewModel):
-            selectWebLinkSubject.onNext(viewModel.url)
+            selecedtWebLinkSubject.onNext(viewModel.url)
 
         default:
             return
